@@ -20,7 +20,7 @@ fi
 
 . /opt/docker-solr/scripts/run-initdb
 
-sentinel=/opt/docker-solr/core_created
+sentinel="${SOLR_VAR_DIR:-/opt/solr/server/var}/core_created"
 if [ -f $sentinel ]; then
     echo "skipping core creation"
 else
